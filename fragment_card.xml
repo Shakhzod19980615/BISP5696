@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/contactCardView"
+        app:layout_constraintHeight_percent="0.7"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="56dp"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="12dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minHeight="500dp">
+
+
+            <ImageView
+                android:id="@+id/addingCard_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/left_back_icon"
+                app:layout_constraintBottom_toBottomOf="@+id/cards_textView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/cards_textView"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/cards_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="160dp"
+                android:text="Cards"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toStartOf="@+id/cards_cancelIcon"
+                app:layout_constraintStart_toEndOf="@+id/addingCard_back"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <ImageView
+                android:id="@+id/cards_cancelIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/cancel_icon"
+                app:layout_constraintBottom_toBottomOf="@+id/cards_textView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/cards_textView"
+                tools:ignore="MissingConstraints" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginTop="12dp"
+                android:background="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cards_textView"
+                tools:ignore="MissingConstraints" />
+
+                <LinearLayout
+                    android:id="@+id/bankCardImageLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:ignore="MissingConstraints"
+                    app:layout_constraintTop_toBottomOf="@+id/view"
+                    android:layout_margin="30dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:background="@drawable/bankcardimage">
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/addingCardView"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_margin="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="1dp"
+                tools:ignore="MissingConstraints"
+                app:layout_constraintTop_toBottomOf="@+id/bankCardImageLL">
+
+                <ImageView
+                    android:id="@+id/plusIV"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="13dp"
+                    android:src="@drawable/plus_sign"
+                    tools:ignore="MissingConstraints">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/addTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="100dp"
+                    android:layout_marginEnd="30dp"
+                    android:text="Add Cards"
+                    android:textColor="@color/black"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle">
+
+                </TextView>
+            </androidx.cardview.widget.CardView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.core.widget.NestedScrollView>
