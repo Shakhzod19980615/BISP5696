@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:overScrollMode="never"
+    android:layout_height="match_parent"
+    android:background="@color/defaultIconColor"
+    tools:context=".ui.fragment.ReserveFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/reservedText">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/selected_reservedCard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:id="@+id/selected_reservedCardImage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:paddingLeft="5dp"
+                android:src="@drawable/uzcard"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/selected_reservedCardName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:maxLines="1"
+                android:maxWidth="150dp"
+                android:gravity="center"
+                android:text="UzCard Uzs"
+                android:ellipsize="end"
+                android:textColor="@color/black"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                app:layout_constraintStart_toEndOf="@+id/selected_reservedCardImage"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/selected_reservedText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:text="You have chosen this card"
+                android:textColor="@color/green"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/selected_reservedCardImage"
+                app:layout_constraintTop_toBottomOf="@+id/selected_reservedCardName"
+                tools:ignore="MissingConstraints" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/reservedText"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/textview_bg"
+            android:text="The money reserved in the cards"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            app:layout_constraintCircleRadius="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/selected_reservedCard"
+            tools:ignore="MissingConstraints" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleview_reservedMoney"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/textview_bg"
+            android:nestedScrollingEnabled="false"
+            android:overScrollMode="never"
+            android:scrollbars="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/reservedText"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="NotSibling" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
